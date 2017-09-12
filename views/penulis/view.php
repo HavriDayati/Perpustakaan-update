@@ -1,0 +1,41 @@
+<?php
+
+use yii\helpers\Html;
+use yii\widgets\DetailView;
+
+/* @var $this yii\web\View */
+/* @var $model app\models\Penulis */
+
+$this->title = $model->nama;
+$this->params['breadcrumbs'][] = ['label' => 'Penulis', 'url' => ['index']];
+$this->params['breadcrumbs'][] = $this->title;
+?>
+<div class="penulis-view">
+
+    <h1>Detail Penulis</h1>
+
+    <p>
+        <?= Html::a('<i class="glyphicon glyphicon-pencil"></i> Sunting', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('<i class="glyphicon glyphicon-list"></i> Daftar Penulis', ['penulis/index', 'id' => $model->id], ['class' => 'btn btn-warning']) ?>
+    </p>
+
+    <?= DetailView::widget([
+        'model' => $model,
+        'attributes' => [
+            
+            'nama',
+            [
+
+            'attribute' => 'id_jenis_kelamin',
+                'value' => function($data){
+                    return $data->idJenisKelamin->nama;
+                },
+            ],
+            'alamat:ntext',
+            'lat',
+            'lon',
+        ],
+    ]) ?>
+
+</div>
+

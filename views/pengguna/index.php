@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\PenggunaSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Penggunas';
+$this->title = 'Pengguna';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="pengguna-index">
@@ -16,15 +16,17 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Pengguna', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('<i class ="glyphicon glyphicon-plus"></i> Tambah Pengguna', ['create'], ['class' => 'btn btn-primary']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+            ['class' => 'yii\grid\SerialColumn',
+                'header' => 'No',
 
-            'id',
+            ],
+
             'nama',
             'username',
             'password',

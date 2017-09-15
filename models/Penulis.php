@@ -78,4 +78,8 @@ class Penulis extends \yii\db\ActiveRecord
     {
         return ArrayHelper::map(Penulis::find()->all(),'id','nama');
     }
+    public static function getCount()
+    {
+        return self::find()->count();
+    }
 }

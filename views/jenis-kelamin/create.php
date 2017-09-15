@@ -6,8 +6,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\JenisKelamin */
 
-$this->title = 'Create Jenis Kelamin';
-$this->params['breadcrumbs'][] = ['label' => 'Jenis Kelamins', 'url' => ['index']];
+$this->title = 'Tambah Jenis Kelamin';
+$this->params['breadcrumbs'][] = ['label' => 'Jenis Kelamin', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="jenis-kelamin-create">

@@ -11,7 +11,11 @@ use app\models\Penulis;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="buku-form">
+<div class="buku-form box box-primary">
+
+    <div class="box-header with-border">
+        <h3 class="box-title">Form Buku</h3>
+    </div>
 
     <?php $form = ActiveForm::begin(); ?>
 

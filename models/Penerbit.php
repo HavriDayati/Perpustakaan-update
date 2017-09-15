@@ -23,6 +23,10 @@ class Penerbit extends \yii\db\ActiveRecord
     {
         return 'penerbit';
     }
+    public static function getCount()
+    {
+        return self::find()->count();
+    }
 
     /**
      * @inheritdoc

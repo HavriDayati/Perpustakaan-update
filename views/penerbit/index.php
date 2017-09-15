@@ -10,9 +10,9 @@ use yii\grid\GridView;
 $this->title = 'Penerbit Buku';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="penerbit-index">
+<div class="penerbit-index box box-primary">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>

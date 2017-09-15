@@ -10,13 +10,14 @@ use yii\grid\GridView;
 $this->title = 'Daftar Buku';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="buku-index">
+<div class="buku-index box box primary">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
         <?= Html::a('<i class ="glyphicon glyphicon-plus"></i> Tambah Buku', ['create'], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('<i class="fa fa-print"></i> Export Excel Buku', Yii::$app->request->url.'&export=1', ['class' => 'btn btn-success btn-flat']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,

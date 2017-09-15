@@ -8,7 +8,11 @@ use yii\widgets\ActiveForm;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="jenis-form">
+<div class="jenis-form box box-primary">
+
+	<div class="box-header with-border">
+        <h3 class="box-title">Form Jenis Buku</h3>
+    </div>
 
     <?php $form = ActiveForm::begin(); ?>
 
